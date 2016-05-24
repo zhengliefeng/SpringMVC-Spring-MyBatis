@@ -9,13 +9,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import rml.model.MUser;
 import rml.service.MUserServiceI;
-
+import rml.utl.JUnit4ClassRunner;
 import com.alibaba.fastjson.JSON;
 
-@RunWith(SpringJUnit4ClassRunner.class) // = extends SpringJUnit4ClassRunner
+@RunWith(JUnit4ClassRunner.class) // = extends SpringJUnit4ClassRunner
 @ContextConfiguration(locations = { "classpath:spring.xml", "classpath:spring-mybatis.xml" })
 public class TestMybatis {
-
+	
 	private static final Logger logger = Logger.getLogger(TestMybatis.class);
 
 	private MUserServiceI muserService;
@@ -36,7 +36,7 @@ public class TestMybatis {
 		logger.info(JSON.toJSONStringWithDateFormat(list, "yyyy-MM-dd HH:mm:ss"));
 	}
 	
-	//@Test
+	@Test
 	public void test2() {
 	
 		MUser muser = new MUser();
@@ -48,7 +48,7 @@ public class TestMybatis {
 		logger.info(JSON.toJSONStringWithDateFormat("add "+i, "yyyy-MM-dd HH:mm:ss"));
 	}
 	
-	//@Test
+	@Test
 	public void test3() {
 		
 		MUser muser = new MUser();
@@ -60,7 +60,7 @@ public class TestMybatis {
 		logger.info(JSON.toJSONStringWithDateFormat("update " +i, "yyyy-MM-dd HH:mm:ss"));
 	}
 	
-	//@Test
+	@Test
 	public void test4() {
 		
 		MUser muser = new MUser();
