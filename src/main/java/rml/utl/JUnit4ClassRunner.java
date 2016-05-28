@@ -6,6 +6,7 @@ import org.junit.runners.model.InitializationError;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Log4jConfigurer;
 
+@SuppressWarnings("deprecation")
 public class JUnit4ClassRunner extends SpringJUnit4ClassRunner {
 
 	static {
